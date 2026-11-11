@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CERIA COPY CENTER - Fotocopy, Print & Jilid</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+  body{background:#f6f8ff;color:#222}
+  /* HEADER */
+  header{background:#0b2a6b;color:white;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+  header h2 span{color:#ffcc00}
+  nav a{color:white;text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
+  nav a:hover{color:#ffcc00}
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#0b2a6b,#1a56db);color:white;padding:50px 5%;display:flex;flex-wrap:wrap;align-items:center;gap:30px}
+  .hero-text{flex:1;min-width:280px}
+  .hero-text h1{font-size:42px;line-height:1.1}
+  .hero-text h1 span{color:#ffcc00}
+  .hero-text p{margin:15px 0;opacity:.9;line-height:1.6}
+  .btn{display:inline-block;padding:12px 22px;border-radius:30px;font-weight:bold;text-decoration:none;margin-right:10px}
+  .btn-yellow{background:#ffcc00;color:#111}
+  .btn-white{background:white;color:#0b2a6b}
+  .hero-box{flex:1;min-width:280px;background:white;color:#111;border-radius:20px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+  .hero-box h3{margin-bottom:10px}
+  .hero-box label{font-size:13px;font-weight:bold}
+  .hero-box input,.hero-box select,.hero-box textarea{width:100%;padding:10px;margin:6px 0 12px;border:1px solid #ddd;border-radius:10px}
+  .hero-box button{width:100%;background:#25D366;color:white;border:none;padding:12px;border-radius:10px;font-weight:bold;cursor:pointer;font-size:16px}
+  /* BADGE */
+  .badges{display:flex;gap:10px;flex-wrap:wrap;padding:20px 5%}
+  .badge{background:white;padding:10px 15px;border-radius:30px;box-shadow:0 2px 8px rgba(0,0,0,.08);font-size:13px;font-weight:600}
+  /* LAYANAN */
+  .section{padding:40px 5%}
+  .section h2{text-align:center;font-size:28px;margin-bottom:5px}
+  .section p.sub{text-align:center;color:#666;margin-bottom:25px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:white;border-radius:18px;padding:20px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.06);transition:.2s}
+  .card:hover{transform:translateY(-5px)}
+  .card .icon{font-size:40px}
+  .card h3{margin:10px 0 6px}
+  .card p{font-size:14px;color:#555;line-height:1.5}
+  .card .harga{margin-top:10px;font-weight:bold;color:#1a56db}
+  /* HARGA */
+  .harga-table{max-width:800px;margin:auto;background:white;border-radius:18px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.06)}
+  table{width:100%;border-collapse:collapse}
+  th{background:#0b2a6b;color:white;padding:13px;text-align:left}
+  td{padding:12px 13px;border-bottom:1px solid #eee;font-size:14px}
+  tr:last-child td{border:none}
+  /* TESTI */
+  .testi{background:#fff3c4}
+  .testi-card{background:white;padding:18px;border-radius:15px}
+  .testi-card b{color:#0b2a6b}
+  /* FOOTER */
+  footer{background:#0b2a6b;color:white;padding:30px 5%;text-align:center}
+  footer a{color:#ffcc00;text-decoration:none}
+  .wa-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;font-weight:bold;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,.3);z-index:20}
+  @media(max-width:600px){.hero-text h1{font-size:32px} nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>📄 CERIA <span>COPY CENTER</span></h2>
+  <nav>
+    <a href="#layanan">Layanan</a>
+    <a href="#harga">Harga</a>
+    <a href="#testi">Testimoni</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <p>⭐ 4.9 | 2.000+ Pelanggan Puas | Buka Setiap Hari</p>
+    <h1>Fotocopy Cepat,<br>Hasil Tajam,<br>Harga <span>Pelajar!</span></h1>
+    <p>Fotocopy, Print, Scan, Jilid, Laminating, Cetak Foto & ATK. Mulai Rp 250 / lembar. Tunggu 5 menit jadi, bisa kirim file lewat WA!</p>
+    <a class="btn btn-yellow" href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20fotocopy" target="_blank">💬 Order via WhatsApp</a>
+    <a class="btn btn-white" href="#harga">Lihat Harga ↓</a>
+    <p style="margin-top:15px;font-size:13px">📍 Jl. Besar Sungairampah No. 12, Sumatera Utara &nbsp; | &nbsp; 🕒 07.00 - 21.00 WIB</p>
+  </div>
+
+  <div class="hero-box">
+    <h3>📤 Kirim File & Hitung Harga</h3>
+    <label>Nama Kamu</label>
+    <input type="text" id="nama" placeholder="Contoh: Budi">
+    <label>Pilih Layanan</label>
+    <select id="layanan">
+      <option value="250">Fotocopy Hitam Putih - Rp 250 / lembar</option>
+      <option value="1000">Fotocopy Warna - Rp 1.000 / lembar</option>
+      <option value="500">Print Hitam Putih - Rp 500 / lembar</option>
+      <option value="1500">Print Warna - Rp 1.500 / lembar</option>
+      <option value="5000">Jilid Biasa - Rp 5.000 / buku</option>
+      <option value="15000">Jilid Hard Cover - Rp 15.000 / buku</option>
+      <option value="3000">Laminating - Rp 3.000 / lembar</option>
+    </select>
+    <label>Jumlah Lembar / Buku</label>
+    <input type="number" id="jumlah" value="10" min="1" oninput="hitung()">
+    <p style="font-weight:bold;font-size:18px">Total: <span id="total" style="color:#1a56db">Rp 2.500</span></p>
+    <button onclick="orderWA()">Pesan Sekarang via WA</button>
+    <p style="font-size:12px;color:#666;margin-top:8px">* Upload file lewat WA setelah klik pesan.</p>
+  </div>
+</div>
+
+<div class="badges">
+  <div class="badge">⚡ 5 Menit Jadi</div>
+  <div class="badge">💰 Harga Pelajar</div>
+  <div class="badge">📦 Bisa Antar</div>
+  <div class="badge">🖨️ Mesin Baru & Tajam</div>
+  <div class="badge">📱 Kirim File via WA</div>
+</div>
+
+<!-- LAYANAN -->
+<div class="section" id="layanan">
+  <h2>Layanan Kami</h2>
+  <p class="sub">Semua kebutuhan dokumen kamu ada di sini</p>
+  <div class="grid">
+    <div class="card"><div class="icon">📄</div><h3>Fotocopy</h3><p>Hitam putih & warna, A4 / F4 / A3, bolak-balik, perbanyak skripsi.</p><div class="harga">Mulai Rp 250</div></div>
+    <div class="card"><div class="icon">🖨️</div><h3>Print & Scan</h3><p>Print dari HP, laptop, flashdisk. Scan jadi PDF, kirim ke email / WA.</p><div class="harga">Mulai Rp 500</div></div>
+    <div class="card"><div class="icon">📚</div><h3>Jilid</h3><p>Jilid lakban, spiral, hard cover skripsi & laporan. Rapi & kuat.</p><div class="harga">Mulai Rp 5.000</div></div>
+    <div class="card"><div class="icon">🪪</div><h3>Laminating & Foto</h3><p>Laminating KTP, KK, ijazah. Cetak foto 2x3, 3x4, 4x6.</p><div class="harga">Mulai Rp 3.000</div></div>
+    <div class="card"><div class="icon">✏️</div><h3>ATK Lengkap</h3><p>Pulpen, pensil, buku, map, kertas HVS, materai, amplop.</p><div class="harga">Harga Toko</div></div>
+    <div class="card"><div class="icon">🎨</div><h3>Desain & Banner</h3><p>Desain undangan, spanduk, stiker, banner, ID card.</p><div class="harga">Tanya Admin</div></div>
+  </div>
+</div>
+
+<!-- HARGA -->
+<div class="section" id="harga" style="background:#eef2ff">
+  <h2>Daftar Harga Transparan</h2>
+  <p class="sub">Tidak ada biaya tersembunyi. Semakin banyak, semakin murah!</p>
+  <div class="harga-table">
+    <table>
+      <tr><th>Layanan</th><th>Ukuran</th><th>Harga</th></tr>
+      <tr><td>Fotocopy Hitam Putih</td><td>A4 / F4</td><td><b>Rp 250</b> / lembar</td></tr>
+      <tr><td>Fotocopy Warna</td><td>A4</td><td><b>Rp 1.000</b> / lembar</td></tr>
+      <tr><td>Print Hitam Putih</td><td>A4</td><td><b>Rp 500</b> / lembar</td></tr>
+      <tr><td>Print Warna</td><td>A4</td><td><b>Rp 1.500</b> / lembar</td></tr>
+      <tr><td>Jilid Lakban / Spiral</td><td>-</td><td><b>Rp 5.000</b> / buku</td></tr>
+      <tr><td>Jilid Hard Cover Skripsi</td><td>-</td><td><b>Rp 15.000</b> / buku</td></tr>
+      <tr><td>Laminating</td><td>A4</td><td><b>Rp 3.000</b> / lembar</td></tr>
+      <tr><td>Cetak Foto 4R</td><td>4x6</td><td><b>Rp 2.000</b> / lembar</td></tr>
+    </table>
+  </div>
+  <p style="text-align:center;margin-top:15px;font-size:14px">🎉 <b>PROMO:</b> Fotocopy 100 lembar GRATIS 5 lembar! Berlaku untuk pelajar.</p>
+</div>
+
+<!-- TESTIMONI -->
+<div class="section testi" id="testi">
+  <h2>Kata Pelanggan</h2>
+  <p class="sub">Ribuan pelajar & guru sudah percaya</p>
+  <div class="grid">
+    <div class="testi-card">⭐⭐⭐⭐⭐<p>"Fotocopy skripsi 200 lembar cuma 20 menit jadi. Hasilnya bersih banget!"</p><b>- Siti, Mahasiswi</b></div>
+    <div class="testi-card">⭐⭐⭐⭐⭐<p>"Langganan print tugas di sini. Kirim file lewat WA, tinggal ambil. Praktis!"</p><b>- Andi, Siswa SMA</b></div>
+    <div class="testi-card">⭐⭐⭐⭐⭐<p>"Jilid hard covernya rapi, harganya paling murah di Sungairampah."</p><b>- Pak Budi, Guru</b></div>
+  </div>
+</div>
+
+<!-- KONTAK -->
+<footer id="kontak">
+  <h2 style="margin-bottom:10px">CERIA COPY CENTER</h2>
+  <p>📍 Jl. Besar Sungairampah No. 12, Sumatera Utara<br>
+  📞 WhatsApp: <a href="https://wa.me/6281234567890">0812-3456-7890</a> | 📧 ceriacopy@gmail.com<br>
+  🕒 Buka Setiap Hari: 07.00 - 21.00 WIB</p>
+  <p style="margin-top:15px;font-size:13px;opacity:.7">© 2026 Ceria Copy Center - Fotocopy, Print, Jilid & ATK</p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20order%20fotocopy" target="_blank">💬 Chat WA</a>
+
+<script>
+function hitung(){
+  let harga = document.getElementById('layanan').value;
+  let jml = document.getElementById('jumlah').value || 0;
+  let total = harga * jml;
+  document.getElementById('total').innerText = "Rp " + total.toLocaleString('id-ID');
+}
+function orderWA(){
+  let nama = document.getElementById('nama').value || "Kak";
+  let layanan = document.getElementById('layanan').options[document.getElementById('layanan').selectedIndex].text;
+  let jml = document.getElementById('jumlah').value;
+  let total = document.getElementById('total').innerText;
+  let pesan = "Halo, saya " + nama + ". Saya mau order: " + layanan + ", Jumlah: " + jml + ", Total: " + total;
+  window.open("https://wa.me/6281234567890?text=" + encodeURIComponent(pesan), "_blank");
+}
+hitung();
+</script>
+</body>
+</html>
